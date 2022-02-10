@@ -13,7 +13,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
     permission = await Geolocator.requestPermission();
 
     Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.low);
+      desiredAccuracy: LocationAccuracy.low,
+    );
     print(position);
   }
 
