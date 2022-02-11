@@ -37,6 +37,26 @@ class WeatherModel {
     }
   }
 
+  String getBgImage(int condition) {
+    if (condition < 300) {
+      return 'thundar.jpg';
+    } else if (condition < 400) {
+      return 'rain-cloud.jpg';
+    } else if (condition < 600) {
+      return 'rainy.jpg';
+    } else if (condition < 700) {
+      return 'snow.jpg';
+    } else if (condition < 800) {
+      return 'foggy.jpg';
+    } else if (condition == 800) {
+      return 'sunny.jpg';
+    } else if (condition <= 804) {
+      return 'cloudy.jpg';
+    } else {
+      return 'default.jpg';
+    }
+  }
+
   String getMessage(int temp) {
     if (temp > 25) {
       return 'It\'s 🍦 time';
